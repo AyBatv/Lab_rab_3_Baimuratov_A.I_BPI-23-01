@@ -1,0 +1,16 @@
+C:\studying\informatics\C#\Lab_rab_3_Baimuratov_A.I_BPI-23-01\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01\bin\Debug\Lab_rab_2_Baimuratov_A.I_BPI-23-01.exe.config
+C:\studying\informatics\C#\Lab_rab_3_Baimuratov_A.I_BPI-23-01\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01\bin\Debug\Lab_rab_2_Baimuratov_A.I_BPI-23-01.exe
+C:\studying\informatics\C#\Lab_rab_3_Baimuratov_A.I_BPI-23-01\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01\bin\Debug\Lab_rab_2_Baimuratov_A.I_BPI-23-01.pdb
+C:\studying\informatics\C#\Lab_rab_3_Baimuratov_A.I_BPI-23-01\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01\obj\Debug\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01.csproj.AssemblyReference.cache
+C:\studying\informatics\C#\Lab_rab_3_Baimuratov_A.I_BPI-23-01\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01\obj\Debug\Lab_rab_2_Baimuratov_A.I_BPI-23-01.exe.config
+C:\studying\informatics\C#\Lab_rab_3_Baimuratov_A.I_BPI-23-01\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01\obj\Debug\MainWindow.g.cs
+C:\studying\informatics\C#\Lab_rab_3_Baimuratov_A.I_BPI-23-01\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01\obj\Debug\App.g.cs
+C:\studying\informatics\C#\Lab_rab_3_Baimuratov_A.I_BPI-23-01\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01\obj\Debug\Lab_rab_2_Baimuratov_A.I_BPI-23-01_MarkupCompile.cache
+C:\studying\informatics\C#\Lab_rab_3_Baimuratov_A.I_BPI-23-01\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01\obj\Debug\Lab_rab_2_Baimuratov_A.I_BPI-23-01_MarkupCompile.lref
+C:\studying\informatics\C#\Lab_rab_3_Baimuratov_A.I_BPI-23-01\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01\obj\Debug\MainWindow.baml
+C:\studying\informatics\C#\Lab_rab_3_Baimuratov_A.I_BPI-23-01\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01\obj\Debug\Lab_rab_2_Baimuratov_A.I_BPI-23-01.g.resources
+C:\studying\informatics\C#\Lab_rab_3_Baimuratov_A.I_BPI-23-01\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01\obj\Debug\Lab_rab_2_Baimuratov_A.I_BPI_23_01.Properties.Resources.resources
+C:\studying\informatics\C#\Lab_rab_3_Baimuratov_A.I_BPI-23-01\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01\obj\Debug\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01.csproj.GenerateResource.cache
+C:\studying\informatics\C#\Lab_rab_3_Baimuratov_A.I_BPI-23-01\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01\obj\Debug\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01.csproj.CoreCompileInputs.cache
+C:\studying\informatics\C#\Lab_rab_3_Baimuratov_A.I_BPI-23-01\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01\obj\Debug\Lab_rab_2_Baimuratov_A.I_BPI-23-01.exe
+C:\studying\informatics\C#\Lab_rab_3_Baimuratov_A.I_BPI-23-01\Lab_rab_3.2_Baimuratov_A.I_BPI-23-01\obj\Debug\Lab_rab_2_Baimuratov_A.I_BPI-23-01.pdb
