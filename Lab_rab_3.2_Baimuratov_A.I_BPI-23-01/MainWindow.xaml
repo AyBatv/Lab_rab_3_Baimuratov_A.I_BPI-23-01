@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab_rab_2_Baimuratov_A.I_BPI_23_01"
         mc:Ignorable="d"
-        Title="MainWindow" Height="680" Width="500">
+        Title="MainWindow" Height="680" Width="500"
+         WindowStartupLocation="CenterScreen">
+    
 
-    <StackPanel>
-        <RadioButton IsChecked="True" Margin="5" Name="Radio1">
+    <StackPanel Background="{StaticResource LightBackgroundBrush}">
+        <RadioButton IsChecked="True" Margin="5" Name="Radio1" Style="{StaticResource FormulaRadioButtonStyle}">
             <WrapPanel>
-                <Image Source="{Binding Image1}" Height="35" Width="300"/>
-                <GroupBox Header="Parameters">
+                <Image Source="{Binding Image1}" Height="35" Width="300" Style="{StaticResource FormulaImageStyle}"/>
+                <GroupBox Style="{StaticResource ParametersGroupBoxStyle}" Header="Parameters">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -22,21 +24,21 @@
                             <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
 
-                        <Label Content="a" Grid.Column="0" Grid.Row="0"/>
-                        <TextBox Text="0,00" Grid.Column="1" Grid.Row="0" MinWidth="70" Name="R1TextA" PreviewTextInput="NumberValidationTextBox"/>
+                        <Label Style="{StaticResource ParameterLabelStyle}" Content="a" Grid.Column="0" Grid.Row="0"/>
+                        <TextBox Style="{StaticResource InputTextBoxStyle}" Text="0,00" Grid.Column="1" Grid.Row="0" MinWidth="70" Name="R1TextA" PreviewTextInput="NumberValidationTextBox"/>
 
-                        <Label Content="f" Grid.Column="0" Grid.Row="1"/>
-                        <ComboBox Grid.Column="1" Grid.Row="1" Name="R1ComboF" SelectedIndex="0"
+                        <Label Style="{StaticResource ParameterLabelStyle}" Content="f" Grid.Column="0" Grid.Row="1"/>
+                        <ComboBox Style="{StaticResource ParameterComboBoxStyle}" Grid.Column="1" Grid.Row="1" Name="R1ComboF" SelectedIndex="0"
                                   ItemsSource="{Binding ListF1}"/>
                     </Grid>
                 </GroupBox>
             </WrapPanel>
         </RadioButton>
 
-        <RadioButton Margin="5" Name="Radio2">
+        <RadioButton Margin="5" Name="Radio2" Style="{StaticResource FormulaRadioButtonStyle}">
             <WrapPanel>
-                <Image Source="{Binding Image2}" Height="35" Width="300"/>
-                <GroupBox Header="Parameters">
+                <Image Source="{Binding Image2}" Height="35" Width="300" Style="{StaticResource FormulaImageStyle}"/>
+                <GroupBox Style="{StaticResource ParametersGroupBoxStyle}" Header="Parameters">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -48,89 +50,24 @@
                             <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
 
-                        <Label Content="a" Grid.Column="0" Grid.Row="0"/>
-                        <TextBox Text="0,00" Grid.Column="1" Grid.Row="0" MinWidth="70" Name="R2TextA" PreviewTextInput="NumberValidationTextBox"/>
+                        <Label Style="{StaticResource ParameterLabelStyle}" Content="a" Grid.Column="0" Grid.Row="0"/>
+                        <TextBox Style="{StaticResource InputTextBoxStyle}" Text="0,00" Grid.Column="1" Grid.Row="0" MinWidth="70" Name="R2TextA" PreviewTextInput="NumberValidationTextBox"/>
 
-                        <Label Content="b" Grid.Column="0" Grid.Row="1"/>
-                        <TextBox Text="0,00" Grid.Column="1" Grid.Row="1" MinWidth="70" Name="R2TextB" PreviewTextInput="NumberValidationTextBox"/>
+                        <Label Style="{StaticResource ParameterLabelStyle}" Content="b" Grid.Column="0" Grid.Row="1"/>
+                        <TextBox Style="{StaticResource InputTextBoxStyle}" Text="0,00" Grid.Column="1" Grid.Row="1" MinWidth="70" Name="R2TextB" PreviewTextInput="NumberValidationTextBox"/>
 
-                        <Label Content="f" Grid.Column="0" Grid.Row="2"/>
-                        <ComboBox Grid.Column="1" Grid.Row="2" Name="R2ComboF" SelectedIndex="0"
-                          ItemsSource="{Binding ListF2}"/>
+                        <Label Style="{StaticResource ParameterLabelStyle}" Content="f" Grid.Column="0" Grid.Row="2"/>
+                        <ComboBox Style="{StaticResource ParameterComboBoxStyle}" Grid.Column="1" Grid.Row="2" Name="R2ComboF" SelectedIndex="0"
+                              ItemsSource="{Binding ListF2}"/>
                     </Grid>
                 </GroupBox>
             </WrapPanel>
         </RadioButton>
 
-        <RadioButton Margin="5" Name="Radio3">
+        <RadioButton Margin="5" Name="Radio3" Style="{StaticResource FormulaRadioButtonStyle}">
             <WrapPanel>
-                <Image Source="{Binding Image3}" Height="35" Width="300"/>
-                <GroupBox Header="Parameters">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition Width="100"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Label Content="a" Grid.Column="0" Grid.Row="0"/>
-                        <TextBox Text="0,00" Grid.Column="1" Grid.Row="0" MinWidth="70" Name="R3TextA" PreviewTextInput="NumberValidationTextBox" />
-
-                        <Label Content="b" Grid.Column="0" Grid.Row="1"/>
-                        <TextBox Text="0,00" Grid.Column="1" Grid.Row="1" MinWidth="70" Name="R3TextB" PreviewTextInput="NumberValidationTextBox" />
-
-                        <Label Content="c" Grid.Column="0" Grid.Row="2"/>
-                        <ComboBox Grid.Column="1" Grid.Row="2" Name="R3ComboC" SelectedIndex="0"
-                                  ItemsSource="{Binding ListC1}"/>
-
-                        <Label Content="d" Grid.Column="0" Grid.Row="3"/>
-                        <ComboBox Grid.Column="1" Grid.Row="3" Name="R3ComboD" SelectedIndex="0"
-                                  ItemsSource="{Binding ListD}"/>
-                    </Grid>
-                </GroupBox>
-            </WrapPanel>
-        </RadioButton>
-
-
-        <RadioButton Margin="5" Name="Radio4">
-            <WrapPanel>
-                <Image Source="{Binding Image4}" Height="50" Width="300"/>
-                <GroupBox Header="Parameters">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition Width="100"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Label Content="d" Grid.Column="0" Grid.Row="0"/>
-                        <TextBox Text="0,00" Grid.Column="1" Grid.Row="0" MinWidth="70" Name="R4TextD" PreviewTextInput="NumberValidationTextBox" />
-
-                        <Label Content="a" Grid.Column="0" Grid.Row="1"/>
-                        <TextBox Text="0,00" Grid.Column="1" Grid.Row="1" MinWidth="70" Name="R4TextA" PreviewTextInput="NumberValidationTextBox" />
-
-                        <Label Content="c" Grid.Column="0" Grid.Row="2"/>
-                        <ComboBox Grid.Column="1" Grid.Row="2" Name="R4ComboC" SelectedIndex="0"
-                                  ItemsSource="{Binding ListC}"/>
-                    </Grid>
-                </GroupBox>
-            </WrapPanel>
-        </RadioButton>
-
-
-        <RadioButton Margin="5" Name="Radio5">
-            <WrapPanel>
-                <Image Source="{Binding Image5}" Height="50" Width="300"/>
-                <GroupBox Header="Parameters">
+                <Image Source="{Binding Image3}" Height="35" Width="300" Style="{StaticResource FormulaImageStyle}"/>
+                <GroupBox Style="{StaticResource ParametersGroupBoxStyle}" Header="Parameters">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -143,46 +80,93 @@
                             <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
 
-                        <Label Content="x" Grid.Column="0" Grid.Row="0"/>
-                        <TextBox Text="1,0" Grid.Column="1" Grid.Row="0" MinWidth="70" Name="R5TextX" PreviewTextInput="NumberValidationTextBox" />
+                        <Label Style="{StaticResource ParameterLabelStyle}" Content="a" Grid.Column="0" Grid.Row="0"/>
+                        <TextBox Style="{StaticResource InputTextBoxStyle}" Text="0,00" Grid.Column="1" Grid.Row="0" MinWidth="70" Name="R3TextA" PreviewTextInput="NumberValidationTextBox"/>
 
-                        <Label Content="y" Grid.Column="0" Grid.Row="1"/>
-                        <TextBox Text="1,0" Grid.Column="1" Grid.Row="1" MinWidth="70" Name="R5TextY" PreviewTextInput="NumberValidationTextBox" />
+                        <Label Style="{StaticResource ParameterLabelStyle}" Content="b" Grid.Column="0" Grid.Row="1"/>
+                        <TextBox Style="{StaticResource InputTextBoxStyle}" Text="0,00" Grid.Column="1" Grid.Row="1" MinWidth="70" Name="R3TextB" PreviewTextInput="NumberValidationTextBox"/>
 
-                        <Label Content="N" Grid.Column="0" Grid.Row="2"/>
-                        <ComboBox Grid.Column="1" Grid.Row="2" Name="R5ComboN" SelectedIndex="0"
-                                  ItemsSource="{Binding ListN}"/>
+                        <Label Style="{StaticResource ParameterLabelStyle}" Content="c" Grid.Column="0" Grid.Row="2"/>
+                        <ComboBox Style="{StaticResource ParameterComboBoxStyle}" Grid.Column="1" Grid.Row="2" Name="R3ComboC" SelectedIndex="0"
+                              ItemsSource="{Binding ListC1}"/>
 
-                        <Label Content="K" Grid.Column="0" Grid.Row="3"/>
-                        <ComboBox Grid.Column="1" Grid.Row="3" Name="R5ComboK" SelectedIndex="0"
-                                  ItemsSource="{Binding ListK}"/>
+                        <Label Style="{StaticResource ParameterLabelStyle}" Content="d" Grid.Column="0" Grid.Row="3"/>
+                        <ComboBox Style="{StaticResource ParameterComboBoxStyle}" Grid.Column="1" Grid.Row="3" Name="R3ComboD" SelectedIndex="0"
+                              ItemsSource="{Binding ListD}"/>
                     </Grid>
                 </GroupBox>
             </WrapPanel>
         </RadioButton>
 
-        <!-- === Кнопка для расчёта === -->
-        <Button Content="Считать"
-                Width="100"
-                Margin="10"
-                HorizontalAlignment="Center"
-                Click="Button_Click">
-            <Button.Background>
-            <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
-                <GradientStop Color="NavajoWhite" Offset="0" />
-                <GradientStop Color="White" Offset="1" />
-            </LinearGradientBrush>
-            </Button.Background>
-            <Button.Foreground>
-                <LinearGradientBrush>
-                    <GradientStop Color="Blue" Offset="1" />
-                    <GradientStop Color="Red" Offset="0.5" />
-                    <GradientStop Color="Yellow" Offset="0" />
-                </LinearGradientBrush>
-            </Button.Foreground>
+        <RadioButton Margin="5" Name="Radio4" Style="{StaticResource FormulaRadioButtonStyle}">
+            <WrapPanel>
+                <Image Source="{Binding Image4}" Height="50" Width="300" Style="{StaticResource FormulaImageStyle}"/>
+                <GroupBox Style="{StaticResource ParametersGroupBoxStyle}" Header="Parameters">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
 
-        </Button>
+                        <Label Style="{StaticResource ParameterLabelStyle}" Content="d" Grid.Column="0" Grid.Row="0"/>
+                        <TextBox Style="{StaticResource InputTextBoxStyle}" Text="0,00" Grid.Column="1" Grid.Row="0" MinWidth="70" Name="R4TextD" PreviewTextInput="NumberValidationTextBox"/>
 
-            <TextBlock Text="{Binding Result}" Margin="10" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <Label Style="{StaticResource ParameterLabelStyle}" Content="a" Grid.Column="0" Grid.Row="1"/>
+                        <TextBox Style="{StaticResource InputTextBoxStyle}" Text="0,00" Grid.Column="1" Grid.Row="1" MinWidth="70" Name="R4TextA" PreviewTextInput="NumberValidationTextBox"/>
+
+                        <Label Style="{StaticResource ParameterLabelStyle}" Content="c" Grid.Column="0" Grid.Row="2"/>
+                        <ComboBox Style="{StaticResource ParameterComboBoxStyle}" Grid.Column="1" Grid.Row="2" Name="R4ComboC" SelectedIndex="0"
+                              ItemsSource="{Binding ListC}"/>
+                    </Grid>
+                </GroupBox>
+            </WrapPanel>
+        </RadioButton>
+
+        <RadioButton Margin="5" Name="Radio5" Style="{StaticResource FormulaRadioButtonStyle}">
+            <WrapPanel>
+                <Image Source="{Binding Image5}" Height="50" Width="300" Style="{StaticResource FormulaImageStyle}"/>
+                <GroupBox Style="{StaticResource ParametersGroupBoxStyle}" Header="Parameters">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Style="{StaticResource ParameterLabelStyle}" Content="x" Grid.Column="0" Grid.Row="0"/>
+                        <TextBox Style="{StaticResource InputTextBoxStyle}" Text="1,0" Grid.Column="1" Grid.Row="0" MinWidth="70" Name="R5TextX" PreviewTextInput="NumberValidationTextBox"/>
+
+                        <Label Style="{StaticResource ParameterLabelStyle}" Content="y" Grid.Column="0" Grid.Row="1"/>
+                        <TextBox Style="{StaticResource InputTextBoxStyle}" Text="1,0" Grid.Column="1" Grid.Row="1" MinWidth="70" Name="R5TextY" PreviewTextInput="NumberValidationTextBox"/>
+
+                        <Label Style="{StaticResource ParameterLabelStyle}" Content="N" Grid.Column="0" Grid.Row="2"/>
+                        <ComboBox Style="{StaticResource ParameterComboBoxStyle}" Grid.Column="1" Grid.Row="2" Name="R5ComboN" SelectedIndex="0"
+                              ItemsSource="{Binding ListN}"/>
+
+                        <Label Style="{StaticResource ParameterLabelStyle}" Content="K" Grid.Column="0" Grid.Row="3"/>
+                        <ComboBox Style="{StaticResource ParameterComboBoxStyle}" Grid.Column="1" Grid.Row="3" Name="R5ComboK" SelectedIndex="0"
+                              ItemsSource="{Binding ListK}"/>
+                    </Grid>
+                </GroupBox>
+            </WrapPanel>
+        </RadioButton>
+
+
+        <Button Style="{StaticResource CalculateButtonStyle}" Content="Считать"
+            Width="100" Margin="10" HorizontalAlignment="Center"
+            Click="Button_Click"/>
+
+        <TextBlock Style="{StaticResource ResultTextBlockStyle}" 
+               Text="{Binding Result}" Margin="10" HorizontalAlignment="Center"/>
     </StackPanel>
 </Window>

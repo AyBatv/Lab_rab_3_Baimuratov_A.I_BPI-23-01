@@ -40,7 +40,7 @@ namespace Lab_rab_2_Baimuratov_A.I_BPI_23_01
 
         private void InitializeListBoxes()
         {
-            ListF1 = new List<string> { "4", "5", "6", "7", "8", "9" };
+            ListF1 = new List<string> { "4", "5", "6", "7", "8" };
             ListF2 = new List<string> { "10", "20", "30", "40" };
             ListC = new List<string> { "0", "1", "2", "3", "4", "5" };
             ListC1 = new List<string> { "0", "1" };

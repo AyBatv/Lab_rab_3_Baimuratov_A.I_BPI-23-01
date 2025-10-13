@@ -1,43 +1,45 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <!-- Кисть для светлого фона -->
     <LinearGradientBrush x:Key="LightBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
         <GradientStop Color="#FFFAFA" Offset="0"/>
         <GradientStop Color="#E6F3FF" Offset="1"/>
     </LinearGradientBrush>
 
-    <!-- Стиль для RadioButton -->
     <Style x:Key="FormulaRadioButtonStyle" TargetType="RadioButton">
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="BorderBrush" Value="#4CAF50"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="Margin" Value="8,5"/>
-        <Setter Property="Padding" Value="5"/>
-        <Style.Triggers>
-            <Trigger Property="IsChecked" Value="True">
-                <Setter Property="BorderBrush" Value="#2196F3"/>
-                <Setter Property="BorderThickness" Value="2"/>
-                <Setter Property="Background">
-                    <Setter.Value>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                            <GradientStop Color="#E3F2FD" Offset="0"/>
-                            <GradientStop Color="#BBDEFB" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Setter.Value>
-                </Setter>
-            </Trigger>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="BorderBrush" Value="#FF9800"/>
-                <Setter Property="Background">
-                    <Setter.Value>
-                        <SolidColorBrush Color="#FFF3E0"/>
-                    </Setter.Value>
-                </Setter>
-            </Trigger>
-        </Style.Triggers>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <Border x:Name="border" 
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="3"
+                        Padding="{TemplateBinding Padding}">
+                        <ContentPresenter/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#2196F3"/>
+                            <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+                            <Setter TargetName="border" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                        <GradientStop Color="#E3F2FD" Offset="0"/>
+                                        <GradientStop Color="#BBDEFB" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#FF9800"/>
+                            <Setter TargetName="border" Property="Background" Value="#FFF3E0"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 
-    <!-- Стиль для GroupBox -->
     <Style x:Key="ParametersGroupBoxStyle" TargetType="GroupBox">
         <Setter Property="BorderBrush" Value="#90A4AE"/>
         <Setter Property="BorderThickness" Value="1"/>
@@ -51,18 +53,17 @@
         </Setter>
         <Setter Property="Foreground" Value="#263238"/>
         <Setter Property="FontWeight" Value="SemiBold"/>
-        <Setter Property="Padding" Value="8"/>
-        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Padding" Value="3"/>
+        <Setter Property="Margin" Value="2"/>
     </Style>
 
-    <!-- Стиль для TextBox -->
     <Style x:Key="InputTextBoxStyle" TargetType="TextBox">
         <Setter Property="Background" Value="White"/>
         <Setter Property="BorderBrush" Value="#B0BEC5"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Foreground" Value="#212121"/>
         <Setter Property="FontSize" Value="12"/>
-        <Setter Property="Padding" Value="4"/>
+        <Setter Property="Padding" Value="2"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Style.Triggers>
             <Trigger Property="IsFocused" Value="True">
@@ -76,31 +77,93 @@
         </Style.Triggers>
     </Style>
 
-    <!-- Стиль для ComboBox -->
-    <Style x:Key="ParameterComboBoxStyle" TargetType="ComboBox">
-        <Setter Property="Background">
+    <Style x:Key="ColoredComboBoxItem" TargetType="ComboBoxItem">
+        <Setter Property="Template">
             <Setter.Value>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                    <GradientStop Color="White" Offset="0"/>
-                    <GradientStop Color="#F5F5F5" Offset="1"/>
-                </LinearGradientBrush>
+                <ControlTemplate TargetType="ComboBoxItem">
+                    <Border x:Name="Border" 
+                        Background="#ccf1f4"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Padding="8,4">
+                        <ContentPresenter/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="#E8F5E8"/>
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="#C8E6C9"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
             </Setter.Value>
         </Setter>
-        <Setter Property="BorderBrush" Value="#B0BEC5"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="Foreground" Value="#212121"/>
-        <Setter Property="FontSize" Value="11"/>
-        <Setter Property="Height" Value="24"/>
-        <Setter Property="VerticalContentAlignment" Value="Center"/>
     </Style>
+    <ControlTemplate x:Key="ComboBoxToggleButton" TargetType="ToggleButton">
+        <Grid>
+            <Border Background="Transparent">
+                <Path Data="M 0 0 L 4 4 L 8 0 Z" 
+                  Fill="#1B5E20"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+            </Border>
+        </Grid>
+    </ControlTemplate>
+  
+    <Style x:Key="ParameterComboBoxStyle" TargetType="ComboBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComboBox">
+                    <Grid>
+                        <Border x:Name="border" 
+                            Background="#E8F5E8"
+                            BorderBrush="#388E3C"
+                            BorderThickness="1.5"
+                            CornerRadius="2"/>
 
-    <!-- Стиль для кнопки расчета -->
+                        <ContentPresenter Content="{TemplateBinding SelectionBoxItem}"
+                                      Margin="4,2,25,2"
+                                      VerticalAlignment="Center"
+                                      HorizontalAlignment="Left"/>
+
+                        <ToggleButton x:Name="toggleButton"
+                                  HorizontalAlignment="Right"
+                                  Width="20"
+                                  Focusable="False"
+                                  IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                  ClickMode="Press"
+                                  Template="{StaticResource ComboBoxToggleButton}"/>
+
+                        <Popup x:Name="popup"
+                           Placement="Bottom"
+                           IsOpen="{TemplateBinding IsDropDownOpen}"
+                           AllowsTransparency="True"
+                           Focusable="False"
+                           PopupAnimation="Slide">
+                            <Border Background="White"
+                                BorderBrush="#388E3C"
+                                BorderThickness="1"
+                                CornerRadius="2"
+                                MaxHeight="200">
+                                <ScrollViewer>
+                                    <ItemsPresenter/>
+                                </ScrollViewer>
+                            </Border>
+                        </Popup>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="ItemContainerStyle" Value="{StaticResource ColoredComboBoxItem}"/>
+    </Style>
     <Style x:Key="CalculateButtonStyle" TargetType="Button">
         <Setter Property="Background">
             <Setter.Value>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Color="#4CAF50" Offset="0"/>
-                    <GradientStop Color="#388E3C" Offset="1"/>
+                    <GradientStop Color="#388E3C    " Offset="1"/>
                 </LinearGradientBrush>
             </Setter.Value>
         </Setter>
@@ -109,7 +172,7 @@
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="FontSize" Value="13"/>
-        <Setter Property="Padding" Value="15,8"/>
+        <Setter Property="Padding" Value="15,4"/>
         <Setter Property="Margin" Value="10"/>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
@@ -133,14 +196,23 @@
         </Style.Triggers>
     </Style>
 
-    <!-- Стиль для TextBlock с результатом -->
     <Style x:Key="ResultTextBlockStyle" TargetType="TextBlock">
+        <Style.Triggers>
+            <Trigger Property="Text" Value="">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="Visibility" Value="Hidden"/>
+            </Trigger>
+            <Trigger Property="Text" Value="{x:Null}">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="Visibility" Value="Hidden"/>
+            </Trigger>
+        </Style.Triggers>
         <Setter Property="Foreground" Value="#1A237E"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Margin" Value="10"/>
-        <Setter Property="Padding" Value="10,5"/>
+        <Setter Property="Padding" Value="10,3"/>
         <Setter Property="Background">
             <Setter.Value>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
@@ -149,11 +221,8 @@
                 </LinearGradientBrush>
             </Setter.Value>
         </Setter>
-        <Setter Property="BorderBrush" Value="#5C6BC0"/>
-        <Setter Property="BorderThickness" Value="1"/>
     </Style>
 
-    <!-- Стиль для Label -->
     <Style x:Key="ParameterLabelStyle" TargetType="Label">
         <Setter Property="Foreground" Value="#37474F"/>
         <Setter Property="FontWeight" Value="Medium"/>
@@ -162,9 +231,8 @@
         <Setter Property="Padding" Value="5,0"/>
     </Style>
 
-    <!-- Стиль для изображений формул -->
     <Style x:Key="FormulaImageStyle" TargetType="Image">
-        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Margin" Value="2"/>
         <Setter Property="Stretch" Value="Uniform"/>
     </Style>
 </ResourceDictionary>
